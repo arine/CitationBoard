@@ -44,3 +44,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Data file
+members.json
+src/config.ts
+src/assets/logo.png

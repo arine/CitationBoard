@@ -1,0 +1,74 @@
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 5em;
+  background-color: rgba(255,255,255,0.5);
+  width: 100%;
+  height: 100vh;
+  z-index: 9998;
+}
+
+.cover h1 {
+  font-size: 3em;
+  color: rgb(189, 145, 145);
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+.number-postfix {
+  font-size: 0.5em;
+}
+
+.citation {
+  padding: 0;
+}
+.citation-row, .citation-row-header {
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0,0,0,0.1);
+  border-bottom-width: 1px;
+  vertical-align: middle !important;
+}
+.citation-row-header .citation-cell {
+  padding: 0 12px;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(88, 88, 88);
+  text-transform: uppercase;
+}
+.citation-cell {
+  padding: 8px 12px;
+  vertical-align: middle !important;
+  font-family: serif;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.citation-cell.place {
+  min-width: 72px;
+  text-align: center;
+}
+.citation-cell.place, .citation-cell.place span {
+  vertical-align: middle;
+}
+.citation-row-header .citation-cell.profile {
+  width: 120px;
+}
+.citation-cell.profile {
+  width: 120px;
+  padding: 0;
+  overflow: hidden;
+  transform: skewX(10deg) !important;
+}
+.citation-cell.citation {
+  font-size: 1.8em;
+}
+.profile-img-wrapper {
+  transform: skewX(-10deg) !important;
+  width: 132px;
+  height: 60px;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  position: relative;
+  left: -6px;
+}

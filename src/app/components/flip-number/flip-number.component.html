@@ -1,0 +1,28 @@
+<div class="clock flip-clock-wrapper text-center">
+  <ul class="flip" *ngFor="let digit of digits; let i = index" [ngClass]="{ 'play': prevDigits[i] != digit }">
+    <li class="flip-clock-before">
+      <a href="#">
+        <div class="up">
+          <div class="shadow"></div>
+          <div class="inn">{{ digit }}</div>
+        </div>
+        <div class="down">
+          <div class="shadow"></div>
+          <div class="inn">{{ digit }}</div>
+        </div>
+      </a>
+    </li>
+    <li class="flip-clock-active">
+      <a href="#">
+        <div class="up">
+          <div class="shadow"></div>
+          <div class="inn">{{ digit }}</div>
+        </div>
+        <div class="down">
+          <div class="shadow"></div>
+          <div class="inn">{{ digit }}</div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>

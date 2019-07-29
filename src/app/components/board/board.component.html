@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <div class="w-100 mb-3">
+    <div class="d-inline">
+      <img src="../../../assets/logo.png" height="80">
+    </div>
+    <div class="d-inline ml-3" style="text-transform: uppercase; font-size: smaller; opacity: 0.3;">
+      Citation Board
+    </div>
+  </div>
+
+  <div class="w-100">
+    <div class="citation" *ngIf="citations">
+      <div class="citation-row-header d-flex">
+        <div class="citation-cell place flex-shrink-2"></div>
+        <div class="citation-cell profile flex-shrink-2"><div style="width: 48px"></div></div>
+        <div class="citation-cell flex-grow-1 pl-5">Member</div>
+        <div class="citation-cell text-right">Citation</div>
+      </div>
+      <div class="citation-row d-flex" *ngFor="let row of citations; let i = index">
+        <div class="citation-cell place flex-shrink-2 font-display">
+          <span class="d-inline">{{ i + 1 }}</span>
+          <span class="d-inline number-postfix">{{ numberPostfix[(i + 1) % 10]}}</span>
+        </div>
+        <div class="citation-cell profile flex-shrink-2">
+          <div class="profile-img-wrapper"
+            [attr.style]="getPhotoBgStyle(row.id)"
+          ></div>
+        </div>
+        <div class="citation-cell flex-grow-1 pl-5">
+          {{ row.name }}
+        </div>
+        <div class="citation-cell font-display text-right citation">
+          {{ row.value }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cover text-center" *ngIf="showUpdateCover">
+  <app-confetti></app-confetti>
+  <h1 class="font-display">🎊🎉 Congrats! 🎉🎊</h1>
+  <div *ngFor="let member of citationUpdated" class="text-center">
+    <h2>{{ member.name }}</h2>
+    <app-flip-number
+      [previousNumber]="member.prevVaule"
+      [currentNumber]="member.value"
+    ></app-flip-number>
+  </div>
+</div>

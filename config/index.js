@@ -8,6 +8,7 @@ const config = {
     root: rootPath,
     port: process.env.PORT || 8888,
     staticPath: 'dist/citationboard',
+    updateInterval: 600000
   },
 
   production: {
@@ -15,6 +16,7 @@ const config = {
     root: rootPath,
     port: 80,
     staticPath: 'dist/citationboard',
+    updateInterval: 600000
   }
 };
 
